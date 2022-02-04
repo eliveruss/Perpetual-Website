@@ -8,7 +8,7 @@
 }
 body 
 { 
-    background: url(background.jpg) no-repeat center center fixed; 
+    background: url(background.jpg) no-repeat center left fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -17,18 +17,19 @@ body
 }
   .menubar
 {
-    position: sticky;
     display: flex;
+    position: absolute;
+    top: 0;
     height: 50px;
     background-color: black;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif; */
-    min-width: 1500px;
+    min-width: 1920px;
     opacity: 0.9;
     font-family: 'Spectral SC', serif;
-}
+    z-index: 5;
+  }
 .menubar ul
 {
     display: inline-flex;
@@ -94,49 +95,53 @@ body
 .logo img
 {
     position: absolute;
-    width: 280px;
+    width: 14vw;
+    top: 5vh;
     float: left;
     border-radius: 90px;
     opacity: 0.7;
+    z-index: -2;
 }
 .iframe-container
 {
-    position: absolute;
+    position: fixed;
     bottom: 8px;
     right: 16px;
-    font-size: 18px;
     opacity: 0.9;
+    z-index: -2;
 }
 .bottomframe
 {
-    position: absolute;
-    bottom: 8px;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:black;
+    position: fixed;
+    display: block;
+    bottom: 2vh;
+    width: 40vw;
+    min-width: 300px;
+    background: black;
     text-align: center;
     border-radius: 80px;
     opacity: 0.9;
+    z-index: -2;
 }
 .bottomframe ul
-{
-    display: inline-flex;
+{   
+    display: flex;
     list-style: none;
 }
 .bottomframe ul li
-{
-    width: 220px;
+{   
+  
+    width: 10vw;
+    min-width: 70px;
     margin: 1%;
     padding: 20px;
     
 }
 .bottomframe ul li a
 {
-    font-size: 30px;
+    font-size: 2em;
     text-decoration: none;
-    color: red;
+    color: #B22222;
 }
 .ytvideos
 {
@@ -177,7 +182,7 @@ body
     margin-bottom: 10px;
     box-shadow: 2px 2px 2px 2px #696969;
   } */
-  .container {
+  .aboutcontainer {
     display: block;
     position: absolute;
     left: 15%;
@@ -194,36 +199,39 @@ body
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     z-index: -1;
   }
-  .container img {
+  .aboutcontainer img {
       margin-top: 10px;
       width: 100%;
       height: 100%;
   }
   .Members {
     display: flex;
-    margin-top: 15vh;
-      
+    position: relative;
+    width: 90vw;
+    left: 5vw;
+    margin-top: 10vh;
   }
   .Gorczi {
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 300px;
-    margin-left: 40px;
+    width: 15vw;
+    margin-left: auto;
+    margin-right: 5vw;
     margin-top: 40px;
     margin-bottom: 40px;
     border-style: ridge;
     box-shadow: 0px 0px 4px 4px #B22222;
     }
-    .Gorczi a :hover{
-     box-shadow: 0px 0px 16px 16px #B22222;
-     transform: scale(1.04);
-        }
+  .Gorczi a :hover{
+    box-shadow: 0px 0px 16px 16px #B22222;
+    transform: scale(1.04);
+  }
   .Gorczi p {
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 300px;
+    width: 15vw;
     box-shadow: 0px 0px 4px 4px #B22222;
     border-style: ridge;
     text-align: center;
@@ -233,16 +241,17 @@ body
     background-color: black;
      }
   .Gorczi img {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
   }
   .Anal {
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 300px;
-    margin-left: 40px;
+    width: 15vw;
+    margin-left: auto;
+    margin-right: 5vw;
     margin-top: 40px;
     margin-bottom: 40px;
     border-style: ridge;
@@ -259,7 +268,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 300px;
+    width: 15vw;
     box-shadow: 0px 0px 4px 4px #B22222;
     border-style: ridge;
     text-align: center;
@@ -278,8 +287,9 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 300px;
-    margin-left: 40px;
+    width: 15vw;
+    margin-left: auto;
+    margin-right: 5vw;
     margin-top: 40px;
     margin-bottom: 40px;
     border-style: ridge;
@@ -296,7 +306,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 300px;
+    width: 15vw;
     box-shadow: 0px 0px 4px 4px #B22222;
     border-style: ridge;
     text-align: center;
@@ -315,10 +325,11 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 300px;
-    margin-left: 40px;
+    width: 15vw;
+    margin-left: auto;
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-right: auto;
     border-style: ridge;
     box-shadow: 0px 0px 4px 4px #B22222;
     text-align: center;
@@ -333,7 +344,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 300px;
+    width: 15vw;
     box-shadow: 0px 0px 4px 4px #B22222;
     border-style: ridge;
     text-align: center;
@@ -348,70 +359,103 @@ body
       transition: 0.5s;
       
   }
+
+  .Membersdescriptions {
+    display: inline-block;
+  }
+
   .Gorczidescription {
-    display: block;
-    margin-left: auto;
-    margin-top: 200px;
-    margin-right: auto;
-    width: 90%;
+    width: 90vw;
+    margin: 5vw;
     height: 40vh;
     border-radius: 20px;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+  
+  .Gorczidescription::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .Gorczidescription p {
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+  }
+
   .Gorczidescription img {
     float: left;
     height: 40vh;
+    width: auto;
     padding: 1vh;
   }
 
   .Analdescription {
-    
-    display: block;
-    margin-left: auto;
-    margin-top: 100px;
-    margin-right: auto;
-    width: 90%;
+    width: 90vw;
+    margin: 5vw;
     height: 40vh;
     border-radius: 20px;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .Analdescription::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Analdescription p {
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
   }
 
   .Analdescription img {
+
     float: left;
     height: 40vh;
     padding: 1vh;
     }
 
   .Frydadescription {
-    
-    display: block;
-    margin-left: auto;
-    margin-top: 100px;
-    margin-right: auto;
-    width: 90%;
+    width: 90vw;
+    margin: 5vw;
     height: 40vh;
     border-radius: 20px;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .Frydadescription::-webkit-scrollbar {
+    display: none;
   }
 
+  .Frydadescription p {
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+  }
   .Frydadescription img {
     float: left;
     height: 40vh;
@@ -419,21 +463,29 @@ body
   }
 
   .Kubadescription {
-    
-    display: block;
-    margin-left: auto;
-    margin-top: 100px;
-    margin-right: auto;
-    width: 90%;
+    width: 90vw;
+    margin: 5vw;
     height: 40vh;
     border-radius: 20px;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .Kubadescription::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Kubadescription p {
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
   }
   
   .Kubadescription img {
@@ -444,13 +496,14 @@ body
 
   .Exmembers {
     display: flex;
+    margin-top: 18vh;
   }
 
   .Jakubmazur {
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 250px;
+    width: 16vw;
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -467,7 +520,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 250px;
+    width: 16vw;
     border-style: ridge;
     text-align: center;
     font-size: 16px;
@@ -479,7 +532,7 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 250px;
+    width: 16vw;
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -496,7 +549,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 250px;
+    width: 16vw;
     border-style: ridge;
     text-align: center;
     font-size: 16px;
@@ -508,7 +561,7 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 250px;
+    width: 16vw;
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -525,7 +578,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 250px;
+    width: 16vw;
     border-style: ridge;
     text-align: center;
     font-size: 16px;
@@ -538,7 +591,7 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 250px;
+    width: 16vw;
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -555,7 +608,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 250px;
+    width: 16vw;
     border-style: ridge;
     text-align: center;
     font-size: 16px;
@@ -567,7 +620,7 @@ body
     margin-right: auto;
     background-color: black;
     color: rgb(255, 255, 255);
-    width: 250px;
+    width: 16vw;
     margin-left: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -584,7 +637,7 @@ body
     margin-left: -3px;
     margin-top: 10px;
     margin-right: auto;
-    width: 250px;
+    width: 16vw;
     border-style: ridge;
     text-align: center;
     font-size: 16px;
@@ -961,14 +1014,21 @@ body
 
 .tourdatescontainer {
   display: block;
-  position: relative;
+  position: fixed;
   width: 60vw;
   left: 20vw;
   top: 5vh;
   text-align: center;
-  font-size: 24px;
   color: white;
   z-index: -1;
+  overflow-y: scroll;
+  max-height: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tourdatescontainer::-webkit-scrollbar {
+  display: none;
 }
 
 .tourdateslist {
@@ -979,11 +1039,13 @@ body
 .tourdateslist li {
   position: relative;
   display: flex;
+  min-width: 360px;
+  font-size: 1.5vmax;
+  min-height: 7em;
   margin-top: 3vh;
   box-shadow: 0px 0px 4px 4px #B22222;
   border-style: ridge;
   text-align: center;
-  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
   color: rgb(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.90);
@@ -994,7 +1056,6 @@ body
   position: absolute;
   left: 30%;
   width: 70%;
-  font-size: 3.5vh;
   bottom: 1vh;
   font-family: 'Amatic SC', cursive;
 }
@@ -1005,7 +1066,6 @@ body
   left: 30%;
   width: 70%;
   font-family: 'Spectral SC', serif;
-  font-size: 3.5vh;
   text-align: center;
   margin-bottom: 5px;
   color: white; 
@@ -1017,11 +1077,11 @@ body
 }
 
 .backlash {
-  position: relative;
+  position: fixed;
   display: block;
   width: 60vw;
   left: 20vw;
-  top: 5vh;
+  top: 12vh;
   z-index: -1;
 }
 
@@ -1051,4 +1111,226 @@ body
 .Members>div>p {
   font-family: 'Amatic SC', cursive;
   font-size: 26px;
+}
+
+@media (max-width: 1680px) and (orientation: landscape) {
+  .menubar {
+    min-width: 1680px;
+  }
+  .sub-menu-about {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 1600px) and (orientation: landscape) {
+  .menubar {
+    min-width: 1600px;
+  }
+}
+@media (max-width: 1280px) and (orientation: landscape) {
+  .menubar {
+    min-width: 1280px;
+  }
+  .menubar ul {
+    width: 1280px;
+    height: 70px;
+  }
+  .menubar ul li {
+    font-size: 14px;
+  }
+  .sub-menu-about {
+    width: 140px;
+    height: 320px;
+  }
+  .menubar ul li:hover .sub-menu-about ul li {
+    width: 100px;
+    font-size: 10px;
+  }
+  .logo img {
+    top: 8vh;
+  }
+} 
+@media (max-width: 1176px) and (orientation: landscape) {
+  .menubar {
+    min-width: 1176px;
+  }
+  .menubar ul {
+    width: 1176px;
+  }
+  .backlash {
+    top: 15vh;
+  }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .menubar {
+    min-width: 1024px;
+    height: 6vh;
+  }
+  .menubar ul {
+    width: 1024px;
+    height: 9vh;
+  }
+  .menubar ul li {
+    font-size: 10px;
+  }
+  .sub-menu-about {
+    top: 6vh;
+    height: 34vh; 
+  }
+  .menubar ul li:hover{
+    height: 5vh;
+  }
+  .menubar ul li:hover .sub-menu-about ul li {
+    padding: 4px;
+    height: 4vh;
+  }
+  .menubar ul li:hover .sub-menu-about {
+    margin-left: -26px;
+  }
+}
+@media (max-width: 800px) and (orientation: landscape) {
+  .menubar {
+    min-width: 800px;
+  }
+  .menubar ul {
+    width: 800px;
+  }
+  .menubar ul li {
+    font-size: 8px;
+  }
+  .sub-menu-about {
+    top: 3vh;
+  }
+  .menubar ul li:hover .sub-menu-about {
+    margin-left: -36px;
+  }
+  .bottomframe {
+    bottom: 16vh;
+    width: 90px;
+    min-width: 90px;
+    background-color: black;
+  }
+  .bottomframe ul {   
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1080px) and (orientation: portrait) {
+  body {
+ background-position: left;
+  }
+  .menubar {
+    min-width: 1080px;
+    max-width: 1080px;
+  }
+  .menubar ul {
+    width: 1080px;
+  }
+  .menubar ul li {
+    font-size: 12px;
+  }
+  .sub-menu-about {
+    max-width: 200px;
+  }
+  .menubar ul li:hover .sub-menu-about {
+    margin-left: -50px;
+  }
+  .logo img {
+    width: 100vw;
+    opacity: 1;
+    border-radius: 0;
+  }
+  .backlash {
+    top: 29vh;
+    width: 90vw;
+    left: 5vw;
+  }
+  .bottomframe {
+    bottom: 4vh;
+    height: 40vh;
+    width: 20vw;
+    min-width: 20vw;
+  }
+  .bottomframe ul {   
+    display: inline-block;
+    margin-right: 26px;
+  }
+  .bottomframe ul li a {
+    font-size: 6em;
+    line-height: 1.5em;
+  }
+  .aboutcontainer {
+    top: 36vh;
+    width: 90vw;
+    left: 5vw;
+  }
+  .Members {
+    top: 20vh;
+    width: 98vw;
+    left: 1vw;
+  }
+  .Gorczi {
+    width: 22vw;
+    margin:1vw;
+  }
+  .Anal {
+    width: 22vw;
+    margin:1vw;
+  }
+  .Fryda {
+    width: 22vw;
+    margin:1vw;
+  }
+  .Kuba {
+    width: 22vw;
+    margin:1vw;
+  }
+  .Gorczi p {
+    width: 22vw;
+   }
+  .Anal p {
+    width: 22vw;
+  }
+  .Fryda p {
+    width: 22vw;
+  }
+  .Kuba p {
+    width: 22vw;
+  }
+  .Membersdescriptions {
+    margin-top: 24vh;
+  }
+  .gallery, .gallery2 {
+    display: inline-block;
+    margin-left: 12vw;
+    margin-top: 30vh;
+  }
+  .gallerycontainer {
+    margin-top: 30vh;
+  }
+  .Exmembers {
+    display: inline-block;
+    margin-left: 30vw;
+  }
+  .Jakubmazur {
+    margin: 0;
+    width: 40vw;
+    font-size: 16px;
+  }
+  .Jakubmazur img {
+    width: 100%;
+    height: 100%;
+  }
+  .Jakubmazur p {
+    margin-left: -3px;
+    margin-top: 10px;
+    margin-right: auto;
+    width: 16vw;
+    border-style: ridge;
+    text-align: center;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
 }
