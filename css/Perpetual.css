@@ -1217,7 +1217,7 @@ body
 
 @media (max-width: 1080px) and (orientation: portrait) {
   body {
- background-position: left;
+    background-position: left;
   }
   .menubar {
     min-width: 1080px;
@@ -1334,3 +1334,26 @@ body
     background-color: black;
   }
 }
+  @media (max-width: 1024px) and (orientation: portrait) {
+    .logo img {
+      width: 70vw;
+      left: 20vw;
+    }
+    .backlash {
+      width: 70vw;
+      left: 20vw;
+    }
+    .bottomframe {
+      height: auto;
+    }
+    .bottomframe ul li {
+      font-size: 14px;
+    }
+    .Members {
+      left: 5vw;
+    }
+    .Gorczidescription, .Analdescription, .Frydadescription, .Kubadescription {
+      width: 80vw;
+      margin-left: 15vw;
+    }
+  }
