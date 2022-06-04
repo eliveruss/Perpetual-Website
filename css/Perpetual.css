@@ -15,6 +15,9 @@ body
     background-size: cover;
     font-family: sans-serif;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
   .menubar
 {
     display: flex;
@@ -195,8 +198,8 @@ body
     padding: 10px;
     line-height: 25px;
     text-align: center;
-    font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    font-size: 22px;
+    font-family: 'Amatic SC', cursive;
     z-index: -1;
   }
   .aboutcontainer img {
@@ -208,7 +211,7 @@ body
     display: flex;
     position: relative;
     width: 90vw;
-    left: 5vw;
+    left: 2vw;
     margin-top: 10vh;
   }
   .Gorczi {
@@ -241,6 +244,40 @@ body
     background-color: black;
      }
   .Gorczi img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+  }
+  .Formela {
+    margin-right: auto;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    width: 15vw;
+    margin-left: auto;
+    margin-right: 5vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-style: ridge;
+    box-shadow: 0px 0px 4px 4px #B22222;
+    }
+  .Formela a :hover{
+    box-shadow: 0px 0px 16px 16px #B22222;
+    transform: scale(1.04);
+  }
+  .Formela p {
+    margin-left: -3px;
+    margin-top: 10px;
+    margin-right: auto;
+    width: 15vw;
+    box-shadow: 0px 0px 4px 4px #B22222;
+    border-style: ridge;
+    text-align: center;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: black;
+     }
+  .Formela img {
     width: 100%;
     height: 100%;
     transition: 0.5s;
@@ -392,6 +429,39 @@ body
   }
 
   .Gorczidescription img {
+    float: left;
+    height: 40vh;
+    width: auto;
+    padding: 1vh;
+  }
+  .Formeladescription {
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .Formeladescription::-webkit-scrollbar {
+    display: none;
+  }
+  
+
+  .Formeladescription p {
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+  }
+
+  .Formeladescription img {
     float: left;
     height: 40vh;
     width: auto;
@@ -1098,12 +1168,13 @@ li .past, li .past+p {
   border-style:solid;
   border-width:1px;
   border-color:red;
-  box-shadow: 0px 0px 35px rgba(255,0,0);
+  box-shadow: 0px 0px 15px rgba(255,0,0);
   transition: 2s;
 }
 
 .backlash img:hover {
   transform: scale(2) translateY(10vh);
+  box-shadow: 0px 0px 50px rgba(255,0,0);
   transition: 2s;
 }
 
@@ -1120,6 +1191,131 @@ div>ul>li>a>i:hover {
   transform: scale(1.3);
 }
 
+.merchcontainer {
+  display: block;
+  position: absolute;
+  left: 30vw;
+  top: 15vh;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  width: 40vw;
+  border-style: ridge;
+  box-shadow: 0px 0px 150px 150px rgba(0, 0, 0, 0.90);
+  padding: 10px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Amatic SC', cursive;
+  z-index: -1;
+}
+.merchcontainer img {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.merchlist {
+  width: 70%;
+  margin-top: 100vh;
+  margin-left: 15%;
+  list-style: none;
+  margin-bottom: 3vh;
+}
+
+.merchlist ul {
+  list-style: none;
+}
+
+.merchlist li {
+  position: relative;
+  display: flex;
+  min-width: 360px;
+  font-size: 40px;
+  min-height: 7em;
+  margin-top: 3vh;
+  box-shadow: 0px 0px 4px 4px #B22222;
+  border-style: ridge;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.90);
+}
+
+.merchlist li p {
+  position: absolute;
+  display: block;
+  left: 30%;
+  width: 70%;
+  top: calc(50% - 40px);
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  color: red; 
+  font-size: 60px;
+}
+
+.merchlist li img {
+  display: block;
+  width: 30%;
+}
+.merchlist ul li div {
+  display: block;
+  position: absolute;
+  right: 1%;
+  font-size: 50px;
+  font-family: 'Amatic SC', cursive;
+  color: #fff;
+}
+.merchlist a {
+  display: block;
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  color: white;
+  font-size: 80px;
+  text-decoration: none;
+  font-family: 'Amatic SC', cursive;
+  transition: 0.5s;
+}
+.merchlist a:hover {
+  color: red;
+  font-size: 100px;
+}
+.news {
+  display: block;
+  position: absolute;
+  left: 15vw;
+  top: 15vh;
+  color: rgb(255, 255, 255);
+  width: 70vw;
+  padding: 10px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 26px;
+  font-family: 'Amatic SC', cursive;
+  z-index: -1;
+}
+.news ul {
+  list-style: none;
+  box-shadow: 0px 0px 150px 150px rgba(0, 0, 0, 0.90);
+}
+.news ul li {
+  border-style: ridge;
+  background-color: rgba(0, 0, 0, 0.97);
+  margin-bottom: 3vh;
+  
+}
+.news img {
+    margin: 10px;
+    max-height: 30vh;
+    max-width: 60vw;
+}
+.news a {
+  color: red;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.news a:hover {
+  font-size: 40px;
+}
 @media (max-width: 1680px) and (orientation: landscape) {
   .menubar {
     min-width: 1680px;
