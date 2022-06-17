@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap');
+html{scroll-behavior:smooth}
+
 
 *{
     padding: 0;
@@ -21,18 +23,29 @@ body::-webkit-scrollbar {
   .menubar
 {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
-    height: 50px;
+    height: 8vh;
     background-color: black;
     align-items: center;
     justify-content: center;
     text-align: center;
     min-width: 1920px;
-    opacity: 0.9;
     font-family: 'Spectral SC', serif;
+    font-size: 120%;
     z-index: 5;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
   }
+.menubar img {
+  position: relative;
+  display: block;
+  height: 100%;
+}
 .menubar ul
 {
     display: inline-flex;
@@ -43,7 +56,7 @@ body::-webkit-scrollbar {
 {
     width: 200px;
     margin: 1%;
-    padding: 10px;
+    padding: 1.5vh;
     transition: 1s;
 }
 .menubar ul li a
@@ -72,8 +85,8 @@ body::-webkit-scrollbar {
     display: block;
     position: absolute;
     background-color: black;
-    margin-top: 10px;
-    margin-left: -9px;
+    margin-top: 1.5vh;
+    margin-left: -2vw;
     border-radius: 5px;
 }
 .menubar ul li:hover .sub-menu-about ul
@@ -83,7 +96,7 @@ body::-webkit-scrollbar {
 }
 .menubar ul li:hover .sub-menu-about ul li
 {
-    width: 150px;
+    width: 10vw;
     padding: 10px;
     border-bottom: 1px dotted;
 }
@@ -95,7 +108,7 @@ body::-webkit-scrollbar {
 {
     float: right;
 }
-.logo img
+/* .logo img
 {
     position: absolute;
     width: 14vw;
@@ -104,7 +117,7 @@ body::-webkit-scrollbar {
     border-radius: 90px;
     opacity: 0.7;
     z-index: -2;
-}
+} */
 .iframe-container
 {
     position: fixed;
@@ -118,13 +131,21 @@ body::-webkit-scrollbar {
     position: fixed;
     display: block;
     bottom: 2vh;
+    left: -2.5vw;
     width: 40vw;
     min-width: 300px;
     background: black;
     text-align: center;
     border-radius: 80px;
-    opacity: 0.9;
+    opacity: 0.95;
     z-index: -2;
+    overflow: hidden;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
 }
 .bottomframe ul
 {   
@@ -207,11 +228,45 @@ body::-webkit-scrollbar {
       width: 100%;
       height: 100%;
   }
-  .Members {
+
+  .Membersimg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .Membersimg img {
+    width: 100%;
+  }
+  .Memberslist {
+    position: absolute;
+    width: 100vw;
+    margin-top: 80vh;
+    text-align: center;
+  }
+  .Memberslist ul li {
+    display: inline-block;
+    margin: 1.5vw;
+  }
+  .Memberslist ul li p {
+    width: 16vw;
+    font-family: 'Amatic SC', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 32px;
+    box-shadow: 0px 0px 4px 4px #B22222;
+    border-style: ridge;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .Memberslist ul li :hover {
+    box-shadow: 0px 0px 6px 6px #B22222;
+    transform: scale(1.2);
+  }
+  /* .Members {
     display: flex;
     position: relative;
-    width: 90vw;
-    left: 2vw;
+    height: 85vh;
+    align-items: baseline;
     margin-top: 10vh;
   }
   .Gorczi {
@@ -395,10 +450,11 @@ body::-webkit-scrollbar {
       height: 100%;
       transition: 0.5s;
       
-  }
+  } */
 
   .Membersdescriptions {
     display: inline-block;
+    margin-top: 100vh;
   }
 
   .Gorczidescription {
@@ -468,7 +524,7 @@ body::-webkit-scrollbar {
     padding: 1vh;
   }
 
-  .Analdescription {
+  .Alandescription {
     width: 90vw;
     margin: 5vw;
     height: 40vh;
@@ -481,11 +537,11 @@ body::-webkit-scrollbar {
     -ms-overflow-style: none;
   }
   
-  .Analdescription::-webkit-scrollbar {
+  .Alandescription::-webkit-scrollbar {
     display: none;
   }
 
-  .Analdescription p {
+  .Alandescription p {
     padding: 1em;
     text-align: justify;
     line-height: 2.5vh;
@@ -494,7 +550,7 @@ body::-webkit-scrollbar {
     color: rgb(255, 255, 255);
   }
 
-  .Analdescription img {
+  .Alandescription img {
 
     float: left;
     height: 40vh;
@@ -1030,7 +1086,14 @@ body::-webkit-scrollbar {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
   }
-
+.gallery div p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+}
+.gallery2 div p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 26px;
+}
   #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1112,7 +1175,7 @@ body::-webkit-scrollbar {
   min-width: 360px;
   font-size: 1.5vmax;
   min-height: 7em;
-  margin-top: 3vh;
+  margin-top: 5vh;
   box-shadow: 0px 0px 4px 4px #B22222;
   border-style: ridge;
   text-align: center;
@@ -1154,7 +1217,7 @@ li .past, li .past+p {
   display: block;
   width: 26vw;
   left: 37vw;
-  top: 8vh;
+  top: 10vh;
   z-index: -1;
 }
 
