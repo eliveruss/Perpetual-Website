@@ -138,7 +138,7 @@ body::-webkit-scrollbar {
     text-align: center;
     border-radius: 80px;
     opacity: 0.95;
-    z-index: -2;
+    z-index: +1;
     overflow: hidden;
     -webkit-touch-callout: none; 
     -webkit-user-select: none;
@@ -175,37 +175,7 @@ body::-webkit-scrollbar {
     width: 1120px;
     height: 630px;
 }   
-/* label {
-    display: block;
-    position: absolute;
-    left: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    position: static;
-    margin-left: 50vw;
-    font-size: 16px;
-    color:  rgb(255, 255, 255);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    
-  }
-  
-  #submit_button {
-    margin-left: 33%;
-    background-color: #B22222;
-    height: 40px;
-    width: 450px;
-    color: #FFFFFF;
-    font-weight: bold;
-  }
-  
-  input, textarea {
-    margin-left: 33%;
-    background-color: #D3D3D3;
-    color: #2F4F4F;
-    width: 450px;
-    margin-bottom: 10px;
-    box-shadow: 2px 2px 2px 2px #696969;
-  } */
+
   .aboutcontainer {
     display: block;
     position: absolute;
@@ -620,157 +590,203 @@ body::-webkit-scrollbar {
     padding: 1vh;
   }
 
-  .Exmembers {
+  .exmembers {
     display: flex;
-    margin-top: 18vh;
+    justify-content: center;
+    margin-top: 25vh;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    width: 18vw;
+    height: 50vh;
+    margin: .5vw;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Spectral SC', serif;
+    border: ridge;
+    box-shadow: 0px 0px 6px 6px;
+    transition: 0.5s;
+  }
+  
+  .card:hover {
+    transform: scale(1.25);
+    box-shadow: 0px 0px 12px 12px #B22222;
   }
 
+  .card-image {
+    height: 80%;
+    margin-bottom: 5%;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .jakubmazur {
+    background-image: url('../subpages/jakubmazur.jpg');
+  }
+  
+  .szymonkrolak {
+    background-image: url('../subpages/szymonkrolak.png');
+  }
+
+  .aleksandergaldyn {
+    background-image: url('../subpages/aleksandergaldyn.jpg');
+  }
+
+  .lukaszraczkowski {
+    background-image: url('../subpages/lukaszraczkowski.jpg');
+  }
+
+  .pawelsowinski {
+    background-image: url('../subpages/pawelsowinski.jpg');
+  }
+ /* .Exmembers {
+    display: inline-block;
+    margin-top: 5vh;
+  }
+
+  .Jakubmazur::-webkit-scrollbar {
+    display: none;
+  }
   .Jakubmazur {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 16vw;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .Jakubmazur img {
-    width: 100%;
-    height: 100%;
+    float: left;
+    height: 40vh;
+    padding: 1vh;
   }
   .Jakubmazur p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black;
+  }
+  .Szymonkrolak::-webkit-scrollbar {
+    display: none;
   }
   .Szymonkrolak {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 16vw;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .Szymonkrolak img {
-    width: 100%;
-    height: 100%;
+    float: left;
+    height: 40vh;
+    padding: 1vh;
   }
   .Szymonkrolak p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black;
+  }
+  .Aleksandergaldyn::-webkit-scrollbar {
+    display: none;
   }
   .Aleksandergaldyn {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 16vw;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .Aleksandergaldyn img {
-    width: 100%;
-    height: 100%;
+    float: left;
+    height: 40vh;
+    padding: 1vh;
   }
   .Aleksandergaldyn p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black;
   }
 
+  .Lukaszraczkowski::-webkit-scrollbar {
+    display: none;
+  }
   .Lukaszraczkowski {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 16vw;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .Lukaszraczkowski img {
-    width: 100%;
-    height: 100%;
+    float: left;
+    height: 40vh;
+    padding: 1vh;
   }
   .Lukaszraczkowski p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black;
+  }
+  .Pawelsowinski::-webkit-scrollbar {
+    display: none;
   }
   .Pawelsowinski {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 16vw;
-    margin-left: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    width: 90vw;
+    margin: 5vw;
+    height: 40vh;
+    border-radius: 20px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
+    overflow: scroll;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
   .Pawelsowinski img {
-    width: 100%;
-    height: 100%;
+    float: left;
+    height: 40vh;
+    padding: 1vh;
   }
   .Pawelsowinski p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
+    padding: 1em;
+    text-align: justify;
+    line-height: 2.5vh;
+    font-size: 2vmin;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
     color: rgb(255, 255, 255);
-    background-color: black;
-  }
+  } */
   .gallery {
     display: flex;
     margin-top: 100px;
@@ -1379,7 +1395,112 @@ div>ul>li>a>i:hover {
 .news a:hover {
   font-size: 40px;
 }
-@media (max-width: 1680px) and (orientation: landscape) {
+
+.contact-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-box p {
+  display: block;
+  position: absolute;
+  top: 30vh;
+  font-size: 60px;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Amatic SC', cursive;
+  border: ridge;
+  background-color: rgba(0,0,0,0.9);
+  box-shadow: 0px 0px 4px 4px #B22222;
+}
+
+form {
+  width: 90%;
+  max-width: 900px;
+  margin-top: -10vh;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+  border: ridge;
+
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .input-group {
+  flex-basis: 48%;
+}
+
+input, textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #B22222;
+  box-shadow: 0px 0px 4px 4px #B22222;
+  color: #fff;
+  background: transparent;
+  font-size: 15px;
+}
+
+textarea {
+  height: 250px;
+}
+
+label {
+  height: 100%;
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  color: rgb(100,100,100);
+  cursor: text;
+  transition: 0.2s;
+}
+
+button {
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #B22222;
+  box-shadow: 0px 0px 4px 4px #B22222;
+  color:#B22222;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #B22222;
+  color: #fff
+}
+
+input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
+  top: -35px;
+  font-size: 14px;
+}
+
+
+/* @media (max-width: 1680px) and (orientation: landscape) {
   .menubar {
     min-width: 1680px;
   }
@@ -1622,4 +1743,4 @@ div>ul>li>a>i:hover {
       width: 80vw;
       margin-left: 15vw;
     }
-  }
+  } */
