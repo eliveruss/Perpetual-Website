@@ -1,3 +1,5 @@
+/* GLOBAL SETTINGS */
+
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200&display=swap');
 html{scroll-behavior:smooth}
@@ -20,6 +22,11 @@ body
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* /GLOBAL SETTINGS */
+
+/* MENUBAR */
+
   .menubar
 {
     display: flex;
@@ -30,7 +37,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-width: 1920px;
+    width: 100vw;
     font-family: 'Spectral SC', serif;
     font-size: 120%;
     z-index: 5;
@@ -48,6 +55,8 @@ body::-webkit-scrollbar {
 }
 .menubar ul
 {
+    width: 100%;
+    justify-content: center;
     display: inline-flex;
     list-style: none;
     color: rgb(255, 255, 255);
@@ -108,16 +117,99 @@ body::-webkit-scrollbar {
 {
     float: right;
 }
-/* .logo img
+
+/* /MENUBAR */
+
+/* BURGER MENU FOR MOBILES */
+.burgerbars {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  z-index: 5;
+  transition: 0.5s;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.burger
 {
-    position: absolute;
-    width: 14vw;
-    top: 5vh;
-    float: left;
-    border-radius: 90px;
-    opacity: 0.7;
-    z-index: -2;
-} */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    font-family: 'Spectral SC', serif;
+    font-size: 120%;
+    z-index: 5;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+     -khtml-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
+    transition: 0.5s;
+  }
+.burger img {
+  position: absolute;
+  display: block;
+  height: 10vh;
+  border-radius: 0 0 20px 20px;
+  top: 0;
+}
+.burger ul
+{
+    margin-top: 20vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+.burger ul li
+{
+    width: 200px;
+    margin: 1%;
+    padding: 1.5vh;
+    transition: 1s;
+}
+.burger ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    transition: 1s;  
+}
+.active, .burger ul li:hover
+{
+    background: #B22222;
+    border-radius: 30px;
+    
+  }
+.burger .fa
+{
+    margin-right: 10px;
+}
+
+/* /BURGER MENU FOR MOBILES */
+
+/* BACKGROUND MUSIC FROM YOUTUBE IN CORNER   */
+
 .iframe-container
 {
     position: fixed;
@@ -126,6 +218,11 @@ body::-webkit-scrollbar {
     opacity: 0.9;
     z-index: -2;
 }
+
+/* /BACKGROUND MUSIC FROM YOUTUBE IN CORNER   */
+
+/* CONTACT BAR */
+
 .bottomframe
 {
     position: fixed;
@@ -167,6 +264,11 @@ body::-webkit-scrollbar {
     text-decoration: none;
     color: #B22222;
 }
+
+/* /CONTACT BAR  */
+
+/* YOUTUBE VIDEOS PAGE  */
+
 .ytvideos
 {
     margin-left: auto;
@@ -175,6 +277,10 @@ body::-webkit-scrollbar {
     width: 1120px;
     height: 630px;
 }   
+
+/* /YOUTUBE VIDEOS PAGE */
+
+/* ABOUT BAND PAGE  */
 
   .aboutcontainer {
     display: block;
@@ -187,9 +293,8 @@ body::-webkit-scrollbar {
     border-style: ridge;
     box-shadow: 0px 0px 150px 150px rgba(0, 0, 0, 0.90);
     padding: 10px;
-    line-height: 25px;
     text-align: center;
-    font-size: 22px;
+    font-size: 25.8px; /* too lazy to find and make breakline in html */
     font-family: 'Amatic SC', cursive;
     z-index: -1;
   }
@@ -198,6 +303,10 @@ body::-webkit-scrollbar {
       width: 100%;
       height: 100%;
   }
+
+/* /ABOUT BAND PAGE */
+
+/* MEMBERS PAGE */
 
   .Membersimg {
     position: absolute;
@@ -232,195 +341,6 @@ body::-webkit-scrollbar {
     box-shadow: 0px 0px 6px 6px #B22222;
     transform: scale(1.2);
   }
-  /* .Members {
-    display: flex;
-    position: relative;
-    height: 85vh;
-    align-items: baseline;
-    margin-top: 10vh;
-  }
-  .Gorczi {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 15vw;
-    margin-left: auto;
-    margin-right: 5vw;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    }
-  .Gorczi a :hover{
-    box-shadow: 0px 0px 16px 16px #B22222;
-    transform: scale(1.04);
-  }
-  .Gorczi p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 15vw;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
-     }
-  .Gorczi img {
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-  }
-  .Formela {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 15vw;
-    margin-left: auto;
-    margin-right: 5vw;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    }
-  .Formela a :hover{
-    box-shadow: 0px 0px 16px 16px #B22222;
-    transform: scale(1.04);
-  }
-  .Formela p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 15vw;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
-     }
-  .Formela img {
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-  }
-  .Anal {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 15vw;
-    margin-left: auto;
-    margin-right: 5vw;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-  }
-  .Anal a :hover{
-    box-shadow: 0px 0px 16px 16px #B22222;
-    transform: scale(1.04);
-       }
-  .Anal p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 15vw;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
-  }
-  .Anal img {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s;
-      
-  }
-  .Fryda {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 15vw;
-    margin-left: auto;
-    margin-right: 5vw;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-style: ridge;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-  }
-  .Fryda a :hover{
-    box-shadow: 0px 0px 16px 16px #B22222;
-    transform: scale(1.04);
-       }
-  .Fryda p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 15vw;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
-  }
-  .Fryda img {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s;
-      
-  }
-  .Kuba {
-    margin-right: auto;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    width: 15vw;
-    margin-left: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: auto;
-    border-style: ridge;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-  }
-  .Kuba a :hover{
-    box-shadow: 0px 0px 16px 16px #B22222;
-    transform: scale(1.04);
-       }
-  .Kuba p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 15vw;
-    box-shadow: 0px 0px 4px 4px #B22222;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
-  }
-  .Kuba img {
-      width: 100%;
-      height: 100%;
-      transition: 0.5s;
-      
-  } */
 
   .Membersdescriptions {
     display: inline-block;
@@ -589,6 +509,15 @@ body::-webkit-scrollbar {
     height: 40vh;
     padding: 1vh;
   }
+  
+  .Members>div>p {
+    font-family: 'Amatic SC', cursive;
+    font-size: 26px;
+  }
+
+/* /MEMBERS PAGE */
+
+/* EX MEMBERS PAGE */
 
   .exmembers {
     display: flex;
@@ -641,152 +570,11 @@ body::-webkit-scrollbar {
   .pawelsowinski {
     background-image: url('../subpages/pawelsowinski.jpg');
   }
- /* .Exmembers {
-    display: inline-block;
-    margin-top: 5vh;
-  }
 
-  .Jakubmazur::-webkit-scrollbar {
-    display: none;
-  }
-  .Jakubmazur {
-    width: 90vw;
-    margin: 5vw;
-    height: 40vh;
-    border-radius: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
-    overflow: scroll;
-    max-height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .Jakubmazur img {
-    float: left;
-    height: 40vh;
-    padding: 1vh;
-  }
-  .Jakubmazur p {
-    padding: 1em;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 2vmin;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-  }
-  .Szymonkrolak::-webkit-scrollbar {
-    display: none;
-  }
-  .Szymonkrolak {
-    width: 90vw;
-    margin: 5vw;
-    height: 40vh;
-    border-radius: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
-    overflow: scroll;
-    max-height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .Szymonkrolak img {
-    float: left;
-    height: 40vh;
-    padding: 1vh;
-  }
-  .Szymonkrolak p {
-    padding: 1em;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 2vmin;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-  }
-  .Aleksandergaldyn::-webkit-scrollbar {
-    display: none;
-  }
-  .Aleksandergaldyn {
-    width: 90vw;
-    margin: 5vw;
-    height: 40vh;
-    border-radius: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
-    overflow: scroll;
-    max-height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .Aleksandergaldyn img {
-    float: left;
-    height: 40vh;
-    padding: 1vh;
-  }
-  .Aleksandergaldyn p {
-    padding: 1em;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 2vmin;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-  }
+  /* /EX MEMBERS PAGE */
 
-  .Lukaszraczkowski::-webkit-scrollbar {
-    display: none;
-  }
-  .Lukaszraczkowski {
-    width: 90vw;
-    margin: 5vw;
-    height: 40vh;
-    border-radius: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
-    overflow: scroll;
-    max-height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .Lukaszraczkowski img {
-    float: left;
-    height: 40vh;
-    padding: 1vh;
-  }
-  .Lukaszraczkowski p {
-    padding: 1em;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 2vmin;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-  }
-  .Pawelsowinski::-webkit-scrollbar {
-    display: none;
-  }
-  .Pawelsowinski {
-    width: 90vw;
-    margin: 5vw;
-    height: 40vh;
-    border-radius: 20px;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.6923144257703081) 10%, rgba(0,0,0,0.9023984593837535) 35%);
-    overflow: scroll;
-    max-height: 100%;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .Pawelsowinski img {
-    float: left;
-    height: 40vh;
-    padding: 1vh;
-  }
-  .Pawelsowinski p {
-    padding: 1em;
-    text-align: justify;
-    line-height: 2.5vh;
-    font-size: 2vmin;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-  } */
+/* GALLERY PAGE */
+
   .gallery {
     display: flex;
     margin-top: 100px;
@@ -1147,19 +935,10 @@ body::-webkit-scrollbar {
   #selectedImage {
     max-height: 100%;
   }
+ 
+  /* /GALLERY PAGE */
 
-.tba {
-  display: block;
-  position: absolute;
-  left: 15vw;
-  top: 20vh;
-  font-size: 8vh;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 70vw;
-  height: 20vh;
-  text-align: center;
-}
+  /* TOUR DATES PAGE */
 
 .tourdatescontainer {
   display: block;
@@ -1225,8 +1004,12 @@ body::-webkit-scrollbar {
   width: 30%;
 }
 li .past, li .past+p {
-  color: rgb(80, 80, 80);
+  color: rgb(129, 129, 129);
 }
+
+/* /TOUR DATES PAGE */
+
+/* CONTAINER WITH IMAGE/LINK IN THE CENTER OF THE MAIN PAGE  */
 
 .backlash {
   position: fixed;
@@ -1261,14 +1044,15 @@ li .past, li .past+p {
   font-family: 'Amatic SC', cursive;
   font-size: 26px;
 }
-.Members>div>p {
-  font-family: 'Amatic SC', cursive;
-  font-size: 26px;
-}
+
 
 div>ul>li>a>i:hover {
   transform: scale(1.3);
 }
+
+/* /CONTAINER WITH IMAGE/LINK IN THE CENTER OF THE MAIN PAGE  */
+
+/* MERCH PAGE */
 
 .merchcontainer {
   display: block;
@@ -1357,6 +1141,11 @@ div>ul>li>a>i:hover {
   color: red;
   font-size: 100px;
 }
+
+/* /MERCH PAGE */
+
+/* NEWS PAGE */
+
 .news {
   display: block;
   position: absolute;
@@ -1365,7 +1154,6 @@ div>ul>li>a>i:hover {
   color: rgb(255, 255, 255);
   width: 70vw;
   padding: 10px;
-  line-height: 25px;
   text-align: center;
   font-size: 26px;
   font-family: 'Amatic SC', cursive;
@@ -1396,6 +1184,10 @@ div>ul>li>a>i:hover {
   font-size: 40px;
 }
 
+/* /NEWS PAGE */
+
+/* CONTACT PAGE */
+
 .contact-box {
   width: 100%;
   height: 100vh;
@@ -1405,29 +1197,13 @@ div>ul>li>a>i:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.contact-box p {
-  display: block;
-  position: absolute;
-  top: 30vh;
-  font-size: 60px;
-  padding: 15px;
-  text-align: center;
-  color: #fff;
-  font-family: 'Amatic SC', cursive;
-  border: ridge;
-  background-color: rgba(0,0,0,0.9);
-  box-shadow: 0px 0px 4px 4px #B22222;
-}
-
 form {
-  width: 90%;
-  max-width: 900px;
+  width: 60vw;
   margin-top: -10vh;
   height: 50%;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 30px;
   border: ridge;
-
 }
 
 .input-group {
@@ -1472,7 +1248,7 @@ label {
   transition: 0.2s;
 }
 
-button {
+.contact-box button {
   padding: 10px 0;
   color: #fff;
   outline: none;
@@ -1489,7 +1265,7 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
+.contact-box button:hover {
   background: #B22222;
   color: #fff
 }
@@ -1499,248 +1275,532 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
   font-size: 14px;
 }
 
+/* /CONTACT PAGE */
 
-/* @media (max-width: 1680px) and (orientation: landscape) {
-  .menubar {
-    min-width: 1680px;
-  }
-  .sub-menu-about {
-    max-width: 180px;
-  }
-}
+/* MEDIA QUERIES */
 
-@media (max-width: 1600px) and (orientation: landscape) {
-  .menubar {
-    min-width: 1600px;
-  }
-}
-@media (max-width: 1280px) and (orientation: landscape) {
-  .menubar {
-    min-width: 1280px;
-  }
-  .menubar ul {
-    width: 1280px;
-    height: 70px;
-  }
+@media (max-width: 1680px)  {
   .menubar ul li {
+    width: 135px;
+    padding: 0.5vh;
     font-size: 14px;
   }
-  .sub-menu-about {
-    width: 140px;
-    height: 320px;
+}
+@media (max-width: 1600px)  {
+  .menubar ul li {
+    width: 150px;
+    padding: 0.15vh;
   }
-  .menubar ul li:hover .sub-menu-about ul li {
+  .contact-box {
+    height: 85vh;
+}
+}
+@media (max-width: 1600px) {
+  .menubar ul li {
+    width: 175px;
+    height: 100%;
+    margin-top: 2vh;
+    padding: 0.5vh;
+  }
+  .menubar ul li:hover .sub-menu-about
+  {
+      margin-left: -1.5vw;
+  }
+  .menubar ul li:hover .sub-menu-about ul li
+  {
+      padding: 4px;
+  }
+  .contact-box {
+      height: 110vh;
+  }
+  form {
+    margin-top: -25vh;
+  }
+}
+@media (max-width: 1024px) {
+  .menubar ul li {
     width: 100px;
     font-size: 10px;
   }
-  .logo img {
-    top: 8vh;
-  }
-} 
-@media (max-width: 1176px) and (orientation: landscape) {
-  .menubar {
-    min-width: 1176px;
-  }
-  .menubar ul {
-    width: 1176px;
-  }
-  .backlash {
-    top: 15vh;
-  }
-}
-@media (max-width: 1024px) and (orientation: landscape) {
-  .menubar {
-    min-width: 1024px;
-    height: 6vh;
-  }
-  .menubar ul {
-    width: 1024px;
-    height: 9vh;
-  }
-  .menubar ul li {
-    font-size: 10px;
-  }
-  .sub-menu-about {
-    top: 6vh;
-    height: 34vh; 
-  }
-  .menubar ul li:hover{
-    height: 5vh;
-  }
-  .menubar ul li:hover .sub-menu-about ul li {
-    padding: 4px;
-    height: 4vh;
-  }
-  .menubar ul li:hover .sub-menu-about {
-    margin-left: -26px;
-  }
-}
-@media (max-width: 800px) and (orientation: landscape) {
-  .menubar {
-    min-width: 800px;
-  }
-  .menubar ul {
-    width: 800px;
-  }
-  .menubar ul li {
-    font-size: 8px;
-  }
-  .sub-menu-about {
-    top: 3vh;
-  }
-  .menubar ul li:hover .sub-menu-about {
-    margin-left: -36px;
-  }
   .bottomframe {
-    bottom: 16vh;
-    width: 90px;
-    min-width: 90px;
-    background-color: black;
-  }
-  .bottomframe ul {   
-    display: inline-block;
-  }
-}
-
-@media (max-width: 1080px) and (orientation: portrait) {
-  body {
-    background-position: left;
-  }
-  .menubar {
-    min-width: 1080px;
-    max-width: 1080px;
-  }
-  .menubar ul {
-    width: 1080px;
-  }
-  .menubar ul li {
     font-size: 12px;
   }
-  .sub-menu-about {
-    max-width: 200px;
-  }
-  .menubar ul li:hover .sub-menu-about {
-    margin-left: -50px;
-  }
-  .logo img {
-    width: 100vw;
-    opacity: 1;
-    border-radius: 0;
-  }
-  .backlash {
-    top: 29vh;
-    width: 90vw;
-    left: 5vw;
-  }
-  .bottomframe {
-    bottom: 4vh;
-    height: 40vh;
-    width: 20vw;
-    min-width: 20vw;
-  }
-  .bottomframe ul {   
-    display: inline-block;
-    margin-right: 26px;
-  }
-  .bottomframe ul li a {
-    font-size: 6em;
-    line-height: 1.5em;
-  }
   .aboutcontainer {
-    top: 36vh;
-    width: 90vw;
-    left: 5vw;
-  }
-  .Members {
-    top: 20vh;
-    width: 98vw;
-    left: 1vw;
-  }
-  .Gorczi {
-    width: 22vw;
-    margin:1vw;
-  }
-  .Anal {
-    width: 22vw;
-    margin:1vw;
-  }
-  .Fryda {
-    width: 22vw;
-    margin:1vw;
-  }
-  .Kuba {
-    width: 22vw;
-    margin:1vw;
-  }
-  .Gorczi p {
-    width: 22vw;
-   }
-  .Anal p {
-    width: 22vw;
-  }
-  .Fryda p {
-    width: 22vw;
-  }
-  .Kuba p {
-    width: 22vw;
-  }
-  .Membersdescriptions {
-    margin-top: 24vh;
-  }
-  .gallery, .gallery2 {
-    display: inline-block;
-    margin-left: 12vw;
-    margin-top: 30vh;
-  }
-  .gallerycontainer {
-    margin-top: 30vh;
-  }
-  .Exmembers {
-    display: inline-block;
-    margin-left: 30vw;
-  }
-  .Jakubmazur {
-    margin: 0;
-    width: 40vw;
     font-size: 16px;
   }
-  .Jakubmazur img {
-    width: 100%;
-    height: 100%;
+  .Memberslist ul li p {
+    width: 170px;
+    font-size: 26px;
   }
-  .Jakubmazur p {
-    margin-left: -3px;
-    margin-top: 10px;
-    margin-right: auto;
-    width: 16vw;
-    border-style: ridge;
-    text-align: center;
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: black;
+  .card {
+    font-size: 8px;
+  }
+  .narniostock {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .narniostock p {
+    width: 200px;
+  }
+  .cockney {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .cockney p {
+    width: 200px;
+  }
+  .domzarazy {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .domzarazy p {
+    width: 200px;
+  }
+  .paszczalwa2018 {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .paszczalwa2018 p {
+    width: 200px;
+  }
+  .intertony {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .intertony p {
+    width: 200px;
+  }
+  .emergenza {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .emergenza p {
+    width: 200px;
+  }
+  .cer {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .cer p {
+    width: 200px;
+  }
+  .pubtorpeda {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .pubtorpeda p {
+    width: 200px;
+  }
+  .gallery {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+  .gallery2 {
+    margin-left: 25px;
+  }
+  .gallery div p {
+    font-size: 12px;
+  }
+  .gallery2 div p {
+    font-size: 20px;
+  }
+  .merchlist li {
+    min-height: 0;
+  }
+  .merchlist li p {
+    font-size: 50px;
+  }
+  .merchlist li a {
+    font-size: 30px;
+  }
+  .merchlist ul li div {
+    font-size: 25px;
+  }
+  .contact-box {
+    margin-top: -5vh;
+  }
+  textarea {
+    height: 100px;
+  }
+  button {
+    font-size: 36px;
+  }
+  .ytvideos {
+    max-width: 80vw;
   }
 }
-  @media (max-width: 1024px) and (orientation: portrait) {
-    .logo img {
-      width: 70vw;
-      left: 20vw;
-    }
-    .backlash {
-      width: 70vw;
-      left: 20vw;
-    }
-    .bottomframe {
-      height: auto;
-    }
-    .bottomframe ul li {
-      font-size: 14px;
-    }
-    .Members {
-      left: 5vw;
-    }
-    .Gorczidescription, .Analdescription, .Frydadescription, .Kubadescription {
-      width: 80vw;
-      margin-left: 15vw;
-    }
-  } */
+@media (max-width: 1400px)  {
+  .narniostock {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .narniostock p {
+    width: 300px;
+  }
+  .cockney {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .cockney p {
+    width: 300px;
+  }
+  .domzarazy {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .domzarazy p {
+    width: 300px;
+  }
+  .paszczalwa2018 {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .paszczalwa2018 p {
+    width: 300px;
+  }
+  .intertony {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .intertony p {
+    width: 300px;
+  }
+  .emergenza {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .emergenza p {
+    width: 300px;
+  }
+  .cer {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .cer p {
+    width: 300px;
+  }
+  .pubtorpeda {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 300px;
+    height: 175px;
+  }
+  .pubtorpeda p {
+    width: 300px;
+  }
+  .gallery, .gallery2 {
+    margin-left: 25px;
+  } 
+  form {
+    height: 46.5vh;    
+  }
+}
+@media (max-width: 1600px)  {
+  form {
+    height: 47.5vh;
+  }
+}
+@media (max-width: 1280px)  {
+  .menubar ul li {
+    width: 125px;
+  }
+  .gallery, .gallery2 {
+    margin-left: 60px;
+  }
+  .narniostock {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .narniostock p {
+    width: 250px;
+  }
+  .cockney {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .cockney p {
+    width: 250px;
+  }
+  .domzarazy {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .domzarazy p {
+    width: 250px;
+  }
+  .paszczalwa2018 {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .paszczalwa2018 p {
+    width: 250px;
+  }
+  .intertony {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .intertony p {
+    width: 250px;
+  }
+  .emergenza {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .emergenza p {
+    width: 250px;
+  }
+  .cer {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .cer p {
+    width: 250px;
+  }
+  .pubtorpeda {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 175px;
+  }
+  .pubtorpeda p {
+    width: 250px;
+  }
+}
+@media (max-width: 1440px) {
+  .menubar ul li {
+    width: 150px;
+  }
+  form {
+    height: 54vh;
+  }
+}
+@media (max-width: 1280px) {
+  .menubar ul li {
+    width: 125px;
+  }
+  form {
+    height: 60vh;
+  }
+  .card {
+    font-size: 10px;
+  }
+  .gallery div p, .gallery2 div p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1366px) {
+  .card {
+    font-size: 10px;
+  }
+  .gallery, .gallery2 {
+    margin-left: 5px;
+  }
+  form {
+    height: 62.5vh;
+  }
+}
+@media (max-width: 1280px) {
+  .aboutcontainer {
+    font-size: 20px;
+  }
+  .gallery, .gallery2 {
+    margin-left: 50px;
+  }
+  form {
+    height: 67.5vh;
+  }
+}
+@media (max-width: 1024px) {
+  .menubar ul li {
+    width: 100px;
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  .Memberslist ul li p {
+    font-size: 20px;
+  }
+  .narniostock {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .narniostock p {
+    width: 200px;
+  }
+  .cockney {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .cockney p {
+    width: 200px;
+  }
+  .domzarazy {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .domzarazy p {
+    width: 200px;
+  }
+  .paszczalwa2018 {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .paszczalwa2018 p {
+    width: 200px;
+  }
+  .intertony {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .intertony p {
+    width: 200px;
+  }
+  .emergenza {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .emergenza p {
+    width: 200px;
+  }
+  .cer {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .cer p {
+    width: 200px;
+  }
+  .pubtorpeda {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 200px;
+    height: 150px;
+  }
+  .pubtorpeda p {
+    width: 200px;
+  }
+  .gallery div p, .gallery2 div p {
+    font-size: 14px;
+  }
+  .gallery, .gallery2 {
+    margin-left: 30px;
+  }
+  .ytvideos {
+    max-width: 60vw;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .menubar {
+    display: none;
+  }
+  .burgerbars {
+    display: block;
+  }
+  
+  .burgerbars.active2 .bar:nth-child(2) {
+    opacity: 0;
+  }
+ 
+  .burgerbars.active2 .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .burgerbars.active2 .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .burger {
+    display: block;
+  }
+  
+  .burger.active2 {
+    left: 0;
+  }
+  .bottomframe
+{
+    z-index: 5;
+    left: 100%;
+    width: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    bottom: 5%;
+    transition: 0.5s;
+}
+
+.bottomframe.active2 {
+  left: 0;
+}
+
+.bottomframe ul
+{   
+    justify-content: space-around;
+}
+.bottomframe ul li a
+{
+    color: #fff;
+}
+.backlash {
+  display: none;
+}
+.iframe-container {
+  display: none;
+}
+}
+
+/* /MEDIA QUERIES */

@@ -60,6 +60,29 @@
 
 <!-- END TOP MENU -->
 
+<!-- BURGER -->
+
+<div class="burger">
+    <ul>
+        <img src="logo.png">
+        <li class="active"><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a></li>
+        <li><a href="subpages/news.html"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News</a></li>
+        <li><a href="subpages/tourdates.html"><i class="fa fa-calendar-alt" aria-hidden="true"></i>Tour Dates</a></li>
+        <li><a href="subpages/members.html"><i class="fa fa-users"></i>Members</a></li>
+        <li><a href="subpages/merch.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Merch</a></li>
+        <li><a href="subpages/contact.html"><i class="fa fa-envelope" aria-hidden="true"></i>Contact</a></li>
+    </ul>
+
+</div>  
+
+<div class="burgerbars">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+
+
 <!-- LOGO -->
 <!-- <div class="logo">
     <img src="logo.png">
@@ -77,6 +100,7 @@
     <iframe src="https://www.youtube.com/embed/OY26m3I6MWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <!-- /VIDEO BOX -->
+
 <!-- CONTACT CONTAINER -->
 <div class="bottomframe">
     <ul>
@@ -88,6 +112,24 @@
     </ul>
 </div>
 <!-- /CONTACT CONTAINER -->
-<script type="text/javascript" src="perpetual.js"></script>
+<script>    
+
+    const burgerbars = document.querySelector(".burgerbars");
+    const burger = document.querySelector(".burger");
+    const bottomframe = document.querySelector(".bottomframe");
+
+    burgerbars.addEventListener("click", () => {
+        burgerbars.classList.toggle("active2");
+        burger.classList.toggle("active2");
+        bottomframe.classList.toggle("active2");
+    })
+
+    document.querySelectorAll(".burger").forEach(n => n.addEventListener("click"), () => {
+        burgerbars.classList.remove("active2");
+        burger.classList.remove("active2");
+        bottomframe.classList.remove("active2");
+    })
+
+</script>
 </body>
 </html>
