@@ -136,7 +136,7 @@ body::-webkit-scrollbar {
 
 .bar {
   display: block;
-  width: 25px;
+  width: 50px;
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -150,7 +150,7 @@ body::-webkit-scrollbar {
     top: 0;
     left: -100vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -169,10 +169,10 @@ body::-webkit-scrollbar {
 .burgerimg {
   position: absolute;
   display: block;
-  width: 40vw;
+  width: 60vw;
   border-radius: 0 0 20px 20px;
   top: -100%;
-  left: 30vw;
+  left: 20vw;
   z-index: 6;
   transition: 0.5s;
 }
@@ -1058,8 +1058,8 @@ div>ul>li>a>i:hover {
 .tourdatescontainer {
   display: block;
   position: fixed;
-  width: 60vw;
-  left: 20vw;
+  width: 80vw;
+  left: 10vw;
   top: 5vh;
   text-align: center;
   color: white;
@@ -1119,7 +1119,7 @@ div>ul>li>a>i:hover {
   width: 30%;
 }
 li .past, li .past+p {
-  color: rgb(129, 129, 129);
+  color: rgb(199, 199, 199);
 }
 
 /* /TOUR DATES PAGE */
@@ -1223,10 +1223,10 @@ li .past, li .past+p {
 .news {
   display: block;
   position: absolute;
-  left: 15vw;
-  top: 15vh;
+  left: 10vw;
+  top: 10vh;
   color: rgb(255, 255, 255);
-  width: 70vw;
+  width: 80vw;
   padding: 10px;
   text-align: center;
   font-size: 26px;
@@ -1272,9 +1272,8 @@ li .past, li .past+p {
 }
 
 form {
-  width: 60vw;
-  margin-top: -10vh;
-  height: 50%;
+  height: auto;
+  width: 70vw;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 30px;
   border: ridge;
@@ -1312,12 +1311,11 @@ textarea {
 }
 
 label {
-  height: 100%;
   position: absolute;
   padding: 10px;
   left: 0;
   top: 0;
-  color: rgb(100,100,100);
+  color: rgb(100, 100, 100);
   cursor: text;
   transition: 0.2s;
 }
@@ -1828,6 +1826,9 @@ input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label
   .menubar {
     display: none;
   }
+  .news {
+    font-size: 50px;
+  }
   .burgerbars {
     display: block;
   }
@@ -1918,12 +1919,20 @@ left: 20vw;
   width: 80vw;
   font-size: 80px;
 }
+.Membersdescriptions {
+  margin-top: 60vh;
+}
+.Formeladescription img {
+  height: 50vh;
+}
 .merchcontainer {
+  top: 10vh;
   left: 10vw;
   width: 80vw;
   font-size: 30px;
 }
 .merchlist {
+  margin-top: 60vh;
   margin-left: 5vw;
   width: 90vw;
 }
@@ -1936,6 +1945,40 @@ left: 20vw;
 .merchlist ul li a {
   font-size: 50px;
 }
+
+form {
+  height: auto;
+  width: auto;
+  padding: 60px;
+  margin: auto;
+}
+
+.row {
+  display: block;
+}
+
+input, textarea {
+  padding: 50px;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+textarea {
+  height: 550px;
+}
+
+label {
+  font-size: 50px;
+}
+
+.contact-box button {
+  font-size: 100px;
+  height: 150px;
+}
+input:focus~label, input:valid~label, textarea:focus~label, textarea:valid~label {
+  top: -60px;
+  font-size: 35px;
+}
 }
 
 @media (max-width: 1024px) and (max-height: 1200px) and (orientation: portrait) {
@@ -1945,7 +1988,6 @@ left: 20vw;
     }
     
 }
-
 @media (max-height: 1000px) and (orientation: portrait) {
   .backlash, .blackening, .obliqueness {
     width: 40vw;
@@ -1959,5 +2001,6 @@ left: 20vw;
     left: 15vw;
     }
 }
+
 
 /* /MEDIA QUERIES */
