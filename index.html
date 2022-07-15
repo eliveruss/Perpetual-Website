@@ -62,9 +62,9 @@
 
 <!-- BURGER -->
 
+<img class="burgerimg" src="logo.png">
 <div class="burger">
     <ul>
-        <img src="logo.png">
         <li class="active"><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a></li>
         <li><a href="subpages/news.html"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News</a></li>
         <li><a href="subpages/tourdates.html"><i class="fa fa-calendar-alt" aria-hidden="true"></i>Tour Dates</a></li>
@@ -81,7 +81,7 @@
     <span class="bar"></span>
 </div>
 
-
+<!-- /BURGER -->
 
 <!-- LOGO -->
 <!-- <div class="logo">
@@ -94,6 +94,20 @@
         <a href="https://distrokid.com/hyperfollow/perpetual/backlash?fbclid=IwAR3t3MkvvrsTQbuSaG81cS-384gCCzmaR8nqfDMtg36bCCoJ4FK47Nd-Tf0"><img src="backlash.jpg" alt=""></a>
     </div>
 <!-- /BACKLASH EP IMAGE -->
+
+<!-- BLACKENING EP IMAGE -->
+<div class="blackening">
+    <a href="https://open.spotify.com/album/6kjsl7SiWQ2rYEWx1Mz6sr"><img src="blackening.jpg" alt=""></a>
+</div>
+<!-- /BLACKENING EP IMAGE -->
+
+<!-- OBLIQUENESS EP IMAGE -->
+<div class="obliqueness">
+    <a href="https://open.spotify.com/album/4whJpIMltKHrxWZuqDKAQq"><img src="obliqueness.jpg" alt=""></a>
+</div>
+<!-- /OBLIQUENESS EP IMAGE -->
+
+
 
 <!-- VIDEO BOX -->
 <div class="iframe-container">
@@ -112,24 +126,6 @@
     </ul>
 </div>
 <!-- /CONTACT CONTAINER -->
-<script>    
-
-    const burgerbars = document.querySelector(".burgerbars");
-    const burger = document.querySelector(".burger");
-    const bottomframe = document.querySelector(".bottomframe");
-
-    burgerbars.addEventListener("click", () => {
-        burgerbars.classList.toggle("active2");
-        burger.classList.toggle("active2");
-        bottomframe.classList.toggle("active2");
-    })
-
-    document.querySelectorAll(".burger").forEach(n => n.addEventListener("click"), () => {
-        burgerbars.classList.remove("active2");
-        burger.classList.remove("active2");
-        bottomframe.classList.remove("active2");
-    })
-
-</script>
+<script src="burger.js"></script>
 </body>
 </html>
