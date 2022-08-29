@@ -707,7 +707,6 @@ div>ul>li>a>i:hover {
     margin-bottom: 5%;
     background-size: cover;
     border-radius: 15px 15px 0 0;
-    filter: blur(10px);
   }
   .card:hover .card-image {
     filter: blur(0);
